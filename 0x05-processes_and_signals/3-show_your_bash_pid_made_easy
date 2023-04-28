@@ -1,8 +1,5 @@
 #!/usr/bin/env bash
-# Bash script that displays specific phrase
-while true
-	do
-		echo "To infinity and beyond"
-		sleep 2
-	done
-		exit 0
+# This script displays the PID, along with the process name, of 
+# processes whose name contain the word bash.
+
+pgrep -l bash
