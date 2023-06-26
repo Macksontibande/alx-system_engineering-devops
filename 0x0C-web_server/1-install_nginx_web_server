@@ -2,24 +2,18 @@
 # A script to install nginx on your web-01
 sudo apt update
 sudo apt install -y nginx
-
 sudo mkdir -p /var/www/html
-
 sudo touch /var/www/html/index
 sudo touch /var/www/html/index.html
 sudo touch /var/www/html/index.htm
 sudo touch /var/www/html/index.nginx-debian.html
-
 sudo chown -R "$USER":"$USER" /var/www/html/index
 sudo chown -R "$USER":"$USER" /var/www/html/index.html
 sudo chown -R "$USER":"$USER" /var/www/html/index.htm
 sudo chown -R "$USER":"$USER" /var/www/html/index.nginx-debian.html
-
 echo "Hello World!" > /var/www/html/index
 echo "Hello World!" > /var/www/html/index.html
 echo "Hello World!" > /var/www/html/index.htm
 echo "Hello World!" > /var/www/html/index.nginx-debian.html
-
 sudo ufw allow 'Nginx HTTP'
-
 sudo service nginx restart
