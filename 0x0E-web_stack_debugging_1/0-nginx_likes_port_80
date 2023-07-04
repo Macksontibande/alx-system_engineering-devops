@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# A script to fix that configures a server by running Nginx.
+ln -s -f /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
+sudo service nginx restart
