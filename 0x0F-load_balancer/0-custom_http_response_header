@@ -2,7 +2,10 @@
 # A script to configure Nginx so that its HTTP response
 # Contains a custom header (on web-01 and web-02).
 
+# Install nginx web server
 apt-get  update ; apt-get -y install nginx
+
 string="http {\n\tadd_header X-Served-By \"$HOSTNAME\";"
 sudo sed -i "s/http {/$string/" /etc/nginx/nginx.conf
+# Restart nginx server
 sudo service nginx restart
